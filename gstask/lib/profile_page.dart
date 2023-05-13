@@ -14,10 +14,13 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(),
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile_image.jpg'),
+              radius: 50,
+            ),
             SizedBox(height: 16),
             Text(
-              'John Doe',
+              'Johnny Test',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -25,14 +28,14 @@ class ProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Age: 30',
+              'Age: 29',
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
             SizedBox(height: 8),
             Text(
-              'Some random information about the user...',
+              'A Happy User!',
               style: TextStyle(
                 fontSize: 16,
               ),

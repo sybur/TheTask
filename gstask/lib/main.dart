@@ -88,11 +88,11 @@ class FeedPage extends StatelessWidget {
         itemCount: items.length,
         itemBuilder: (context, index) {
           return ListTile(
-            leading: Image.asset(
-              'https://picsum.photos/200',
+            leading: const CircleAvatar(
+              backgroundImage: NetworkImage('https://picsum.photos/200'),
             ),
             title: Text('${items[index]}'),
-            subtitle: Text('Lorem ipsum dolor sit amet'),
+            subtitle: const Text('HappyFeet'),
           );
         },
       ),
@@ -139,7 +139,7 @@ class _PostPageState extends State<PostPage> {
               padding: EdgeInsets.all(8),
               child: TextFormField(
                 maxLines: null,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Write your post...',
                 ),
                 validator: (value) {

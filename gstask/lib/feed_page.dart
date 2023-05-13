@@ -7,26 +7,25 @@ class FeedPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Feed'),
       ),
-      body: ListView.builder(
-        itemCount: 10,
-        itemBuilder: (BuildContext context, int index) {
-          var BoxFit;
-          return Container(
-            margin: EdgeInsets.all(8),
-            child: Card(
-              child: Column(
-                children: [
-                  Image.asset(
-                    'https://picsum.photos/id//400/300',
-                    fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 20,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage:
+                        AssetImage('assets/images/image_$index.jpg'),
                   ),
-                  SizedBox(height: 8),
-                  Text('Item $index'),
-                ],
-              ),
+                  title: Text('Item $index'),
+                );
+              },
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
