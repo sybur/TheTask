@@ -89,7 +89,8 @@ class FeedPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             leading: const CircleAvatar(
-              backgroundImage: NetworkImage('https://picsum.photos/200'),
+              backgroundImage: NetworkImage(
+                  'https://www.publicdomainpictures.net/pictures/30000/nahled/solid-green-background.jpg'),
             ),
             title: Text('${items[index]}'),
             subtitle: const Text('HappyFeet'),
